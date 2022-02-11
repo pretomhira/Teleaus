@@ -46,3 +46,27 @@ $("#owl-carousel-help").owlCarousel({
     },
   },
 });
+
+// script for client section
+$("#owlcarousel-client").owlCarousel({
+  loop: true,
+  margin: 20,
+  center: true,
+  nav: false,
+  autowidth: true,
+  navText: [
+    "<span aria-label='Previous'> &#x21fd</span>",
+    "<span aria-label='Next'> &#x21fe</span>",
+  ],
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 3,
+    },
+    1000: {
+      items: 5,
+    },
+  },
+});

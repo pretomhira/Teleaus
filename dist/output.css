@@ -832,31 +832,75 @@ Ensure the default browser behavior of the `hidden` attribute.
 /* ###### help section css end  ########*/
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
   padding: 10px;
 }
 
 .child {
-  background: white;
-  max-width: 250px;
-  max-height: 250px;
-  min-width: 250px;
-  min-height: 250px;
-  border-radius: 10%;
-  padding: 20px;
+  display: inline-block;
+  border-radius: 5%;
+  /* padding: 20px; */
   margin: 12px;
 }
 
-.child:first-child {
-  min-width: 500px;
-  min-height: 500px;
+.child img {
+  width: 250px;
+  height: 250px;
+  border-radius: 5%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.child .news_focus {
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(45, 45, 45, 0.5) 70%,
+      rgba(45, 45, 45, 0.9) 100%
+    );
+  width: 250px;
+  height: 250px;
+  border-radius: 5%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.child:first-child img {
   width: 500px;
   height: 500px;
 }
 
-.child:not(:first-child) {
-  flex: 1;
+.child:first-child .news_focus {
+  background: linear-gradient(
+      180deg,
+      rgba(228, 39, 41, 0.1) 0%,
+      #e42729 100%
+    );
+  width: 500px;
+  height: 500px;
+}
+
+/* .child:not(:first-child) {
+    flex: 1;
+  } */
+
+.large_news_focus {
+  background: linear-gradient(
+      180deg,
+      rgba(228, 39, 41, 0.1) 0%,
+      #e42729 100%
+    );
+}
+
+.small_news_focus {
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(45, 45, 45, 0.5) 70%,
+      rgba(45, 45, 45, 0.9) 100%
+    );
 }
 
 .sr-only {
@@ -915,6 +959,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 70%;
 }
 
+.bottom-\[50px\] {
+  bottom: 50px;
+}
+
+.bottom-6 {
+  bottom: 1.5rem;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -925,6 +977,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .m-0 {
   margin: 0px;
+}
+
+.m-2 {
+  margin: 0.5rem;
 }
 
 .mx-auto {
@@ -970,6 +1026,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: -4rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -980,10 +1040,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .-ml-px {
   margin-left: -1px;
-}
-
-.mt-8 {
-  margin-top: 2rem;
 }
 
 .block {
@@ -1130,12 +1186,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-between;
 }
 
-.gap-6 {
-  gap: 1.5rem;
-}
-
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1245,16 +1305,37 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 255 255 / 0));
 }
 
+.from-\[\#ffffff4d\] {
+  --tw-gradient-from: #ffffff4d;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 255 255 / 0));
+}
+
 .via-\[\#ffffff1a\] {
   --tw-gradient-stops: var(--tw-gradient-from), #ffffff1a, var(--tw-gradient-to, rgb(255 255 255 / 0));
+}
+
+.via-\[\#ffffff0d\] {
+  --tw-gradient-stops: var(--tw-gradient-from), #ffffff0d, var(--tw-gradient-to, rgb(255 255 255 / 0));
+}
+
+.via-\[\#ffffff00\] {
+  --tw-gradient-stops: var(--tw-gradient-from), #ffffff00, var(--tw-gradient-to, rgb(255 255 255 / 0));
 }
 
 .to-\[\#ffffff00\] {
   --tw-gradient-to: #ffffff00;
 }
 
+.to-\[\#ffffff4d\] {
+  --tw-gradient-to: #ffffff4d;
+}
+
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-\[60px\] {
+  padding: 60px;
 }
 
 .px-4 {
@@ -1300,6 +1381,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .py-12 {
@@ -1399,6 +1485,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 0.6;
 }
 
+.opacity-80 {
+  opacity: 0.8;
+}
+
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
@@ -1426,6 +1516,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.transition-\[margin-top\] {
+  transition-property: margin-top;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1434,8 +1530,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
+.duration-700 {
+  transition-duration: 700ms;
+}
+
 .focus-within\:z-10:focus-within {
   z-index: 10;
+}
+
+.hover\:mt-2:hover {
+  margin-top: 0.5rem;
 }
 
 .hover\:bg-gray-100:hover {

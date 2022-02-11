@@ -308,30 +308,66 @@
   /* ###### help section css end  ########*/
 
   .container {
-    display: flex;
-
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
     padding: 10px;
   }
   .child {
-    background: white;
-    max-width: 250px;
-    max-height: 250px;
-    min-width: 250px;
-    min-height: 250px;
-    border-radius: 10%;
-    padding: 20px;
+    display: inline-block;
+    border-radius: 5%;
+    /* padding: 20px; */
     margin: 12px;
   }
+  .child img {
+    width: 250px;
+    height: 250px;
+    border-radius: 5%;
+    object-fit: cover;
+  }
+  .child .news_focus {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(45, 45, 45, 0.5) 70%,
+      rgba(45, 45, 45, 0.9) 100%
+    );
+    width: 250px;
+    height: 250px;
+    border-radius: 5%;
+    object-fit: cover;
+  }
 
-  .child:first-child {
-    min-width: 500px;
-    min-height: 500px;
+  .child:first-child img {
+    width: 500px;
+    height: 500px;
+  }
+  .child:first-child .news_focus {
+    background: linear-gradient(
+      180deg,
+      rgba(228, 39, 41, 0.1) 0%,
+      #e42729 100%
+    );
     width: 500px;
     height: 500px;
   }
 
-  .child:not(:first-child) {
+  /* .child:not(:first-child) {
     flex: 1;
+  } */
+  .large_news_focus {
+    background: linear-gradient(
+      180deg,
+      rgba(228, 39, 41, 0.1) 0%,
+      #e42729 100%
+    );
+  }
+  .small_news_focus {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(45, 45, 45, 0.5) 70%,
+      rgba(45, 45, 45, 0.9) 100%
+    );
   }
 }
