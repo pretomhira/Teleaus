@@ -370,4 +370,10 @@
       rgba(45, 45, 45, 0.9) 100%
     );
   }
+  .construction {
+    background: linear-gradient(161.32deg, #ffffff 44.66%, #828282 129.82%);
+  }
+  .construction:hover {
+    background: linear-gradient(161.32deg, #ff2d2f 44.66%, #770001 129.82%);
+  }
 }
